@@ -1,5 +1,8 @@
 # login-demo
 
+config mongodb url in /config/config.default.js 
+
+    url: 'mongodb://example:example@localhost/example',
 
 
 ## QuickStart

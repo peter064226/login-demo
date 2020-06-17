@@ -8,6 +8,10 @@
       <Card icon="log-in" title="欢迎登录" :bordered="false">
         <div class="form-con">
           <login-form @on-success-valid="handleSubmit"></login-form>
+          <div>
+            <Icon size="20" type="logo-github"></Icon>
+                <a href="http://localhost:7001/api/github/login" style="color:#515a6e;">用github登陆</a>
+          </div>
           <p class="login-tip">输入任意用户名和密码即可</p>
         </div>
       </Card>
@@ -27,11 +31,11 @@ export default {
       'handleLogin',
       'getUserInfo'
     ]),
-    handleSubmit ({ userName, password }) {
-      this.handleLogin({ userName, password }).then(res => {
+    handleSubmit ({ username, password }) {
+      this.handleLogin({ username, password }).then(res => {
         this.getUserInfo().then(res => {
           this.$router.push({
-            name: this.$config.homeName
+            name: 'home'
           })
         })
       })

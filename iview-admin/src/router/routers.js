@@ -28,6 +28,15 @@ export default [
     component: () => import('@/view/login/login.vue')
   },
   {
+    path: '/home',
+    name: 'home',
+    meta: {
+      title: 'home',
+      hideInMenu: true
+    },
+    component: () => import('@/view/login/room.vue')
+  },
+  {
     path: '/',
     name: '_home',
     redirect: '/home',
@@ -38,7 +47,7 @@ export default [
     },
     children: [
       {
-        path: '/home',
+        path: '/homee',
         name: 'home',
         meta: {
           hideInMenu: true,
